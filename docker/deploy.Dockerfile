@@ -16,3 +16,4 @@ COPY package*.json ./
 
 RUN npm i
 RUN npm run env
+RUN npm run bundle
