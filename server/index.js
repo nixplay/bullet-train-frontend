@@ -18,7 +18,8 @@ const slackMessage = SLACK_TOKEN && require('./slack-client');
 const E2E_SLACK_CHANNEL_NAME = process.env.E2E_SLACK_CHANNEL_NAME;
 
 // const isDev = process.env.NODE_ENV !== 'production';
-const isDev = !(process.env.NODE_ENV === 'prod' || process.env.NODE_ENV === 'qa' || process.env.NODE_ENV === 'rnd')
+// const isDev = !(process.env.NODE_ENV === 'prod' || process.env.NODE_ENV === 'qa' || process.env.NODE_ENV === 'rnd')
+const isDev = (process.env.IS_DEV === 'true' || process.env.IS_DEV === 'True' || process.env.IS_DEV === 'TRUE')
 const app = express();
 const port = process.env.PORT || 8080;
 
