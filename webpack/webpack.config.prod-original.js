@@ -52,7 +52,7 @@ module.exports = {
 
             new webpack.DefinePlugin({
                 __DEV__: false,
-                SENTRY_RELEASE_VERSION: '1595297323842',
+                SENTRY_RELEASE_VERSION: moment().valueOf().toString(),
             }),
 
             // reduce filesize
