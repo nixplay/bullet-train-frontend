@@ -59,7 +59,7 @@ module.exports = {
             new webpack.optimize.OccurrenceOrderPlugin(),
 
             // pull inline styles into cachebusted file
-            new ExtractTextPlugin({ filename: 'style.[hash].css', allChunks: true }),
+            new ExtractTextPlugin({ filename: 'style.hash.css', allChunks: true }),
 
         ]).concat(require('./pages').map((page) => {
             console.log(page);
